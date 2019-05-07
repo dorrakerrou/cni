@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="REPORT" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4432c653-88be-484a-973f-a562237ea6bd">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="mission"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F5F5DC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#FFFFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="tableau" uuid="bcb74ded-176a-43e8-a062-d8d50b18c2a1">
+		<property name="com.jaspersoft.studio.data.sql.tables" value="IkFWT0lSX0ZSQUlTIiAsMzM3LDk3LGRjM2IyMjZhLWNhNWMtNGI2OS1hMDhhLWViNTZlOTQ3Y2Qx&#xA;NTsiT1JEX01JUyIgLDIwLDIwLDFiM2ZhOTA3LTIwY2YtNGRjMy1iMmM5LTNjMWQ2MWFhYWMwYzsi&#xA;QVZPSVJfQlVER0VUIiAsMTg1LDE2NCw0MzZiYjFiOS1hNTkzLTRlMDgtOTUxNy00OTA2ODk2OGI3&#xA;Y2U7&#xA;"/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="mission"/>
+		<queryString language="SQL">
+			<![CDATA[SELECT "AVOIR_BUDGET"."VALEUR_MISS",
+	"AVOIR_BUDGET"."VALEUR_MISS",
+	"ORD_MIS"."AVANCE",
+	"AVOIR_FRAIS"."VALEUR_P"
+FROM "AVOIR_BUDGET",
+	"AVOIR_FRAIS",
+	"ORD_MIS"]]>
+		</queryString>
+		<field name="VALEUR_MISS" class="java.lang.Double">
+			<property name="com.jaspersoft.studio.field.label" value="VALEUR_MISS"/>
+		</field>
+		<field name="COLUMN_2" class="java.lang.Double">
+			<property name="com.jaspersoft.studio.field.label" value="VALEUR_MISS"/>
+		</field>
+		<field name="AVANCE" class="java.math.BigDecimal">
+			<property name="com.jaspersoft.studio.field.label" value="AVANCE"/>
+		</field>
+		<field name="VALEUR_P" class="java.math.BigDecimal">
+			<property name="com.jaspersoft.studio.field.label" value="VALEUR_P"/>
+		</field>
+	</subDataset>
+	<parameter name="duree" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[select * from 
+"AVOIR_BUDGET","AVOIR_BUDGET_PROJET","AVOIR_FRAIS"
+, "CATEGORIE" , "CLASSE" , "DEPT_GEN" , "FONCTION" , "GRADE",
+"GROUPE","MISSION", "MISSIONNAIRE" ,"MOTCLE","ORD_MIS","PAYS",
+"PROJET","ROLE","TYP_FRAIS","USERS_ROLES","USER_STRUCT",
+"UTILISATEUR","ZONE"]]>
+	</queryString>
+	<field name="CODE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CODE"/>
+	</field>
+	<field name="DATE_BUDG" class="oracle.sql.TIMESTAMP">
+		<property name="com.jaspersoft.studio.field.label" value="DATE_BUDG"/>
+	</field>
+	<field name="ANNEE" class="oracle.sql.TIMESTAMP">
+		<property name="com.jaspersoft.studio.field.label" value="ANNEE"/>
+	</field>
+	<field name="COD_UTIL" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="COD_UTIL"/>
+	</field>
+	<field name="DATE_VAL" class="oracle.sql.TIMESTAMP">
+		<property name="com.jaspersoft.studio.field.label" value="DATE_VAL"/>
+	</field>
+	<field name="REFERENCE_MIS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="REFERENCE_MIS"/>
+	</field>
+	<field name="REFERENCE_TR" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="REFERENCE_TR"/>
+	</field>
+	<field name="TYPE_BUDGET" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="TYPE_BUDGET"/>
+	</field>
+	<field name="VALEUR_MISS" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="VALEUR_MISS"/>
+	</field>
+	<field name="VALEUR_TR" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="VALEUR_TR"/>
+	</field>
+	<field name="COD_PRJ" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="COD_PRJ"/>
+	</field>
+	<field name="COLUMN_12" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CODE"/>
+	</field>
+	<field name="DATE_BPROJ" class="oracle.sql.TIMESTAMP">
+		<property name="com.jaspersoft.studio.field.label" value="DATE_BPROJ"/>
+	</field>
+	<field name="COLUMN_14" class="oracle.sql.TIMESTAMP">
+		<property name="com.jaspersoft.studio.field.label" value="ANNEE"/>
+	</field>
+	<field name="COLUMN_15" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="COD_UTIL"/>
+	</field>
+	<field name="COLUMN_16" class="oracle.sql.TIMESTAMP">
+		<property name="com.jaspersoft.studio.field.label" value="DATE_VAL"/>
+	</field>
+	<field name="REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="REFERENCE"/>
+	</field>
+	<field name="TYPE_BUDGETP" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="TYPE_BUDGETP"/>
+	</field>
+	<field name="VALEUR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="VALEUR"/>
+	</field>
+	<field name="CIN" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CIN"/>
+	</field>
+	<field name="COD_PAYS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="COD_PAYS"/>
+	</field>
+	<field name="NUM_MISSION" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="NUM_MISSION"/>
+	</field>
+	<field name="NUMORD" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="NUMORD"/>
+	</field>
+	<field name="TYP_FRAIS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="TYP_FRAIS"/>
+	</field>
+	<field name="AOBSERV" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="AOBSERV"/>
+	</field>
+	<field name="COLUMN_26" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="COD_PRJ"/>
+	</field>
+	<field name="OBSERV" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="OBSERV"/>
+	</field>
+	<field name="SUP_CODE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="SUP_CODE"/>
+	</field>
+	<field name="SUPPORTE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="SUPPORTE"/>
+	</field>
+	<field name="VALEUR_P" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="VALEUR_P"/>
+	</field>
+	<field name="VALEUR_R" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="VALEUR_R"/>
+	</field>
+	<field name="COLUMN_32" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CODE"/>
+	</field>
+	<field name="NVILLE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="NVILLE"/>
+	</field>
+	<field name="TYPETRANSPORT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="TYPETRANSPORT"/>
+	</field>
+	<field name="COD_CAT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="COD_CAT"/>
+	</field>
+	<field name="LIB_CATA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="LIB_CATA"/>
+	</field>
+	<field name="LIB_CATL" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="LIB_CATL"/>
+	</field>
+	<field name="CLASSGRD" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CLASSGRD"/>
+	</field>
+	<field name="LIBCLASSGRDA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="LIBCLASSGRDA"/>
+	</field>
+	<field name="LIBCLASSGRDL" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="LIBCLASSGRDL"/>
+	</field>
+	<field name="COLUMN_41" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CODE"/>
+	</field>
+	<field name="COD_COMM" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="COD_COMM"/>
+	</field>
+	<field name="CPT_MISSION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="CPT_MISSION"/>
+	</field>
+	<field name="CPT_NBP" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="CPT_NBP"/>
+	</field>
+	<field name="CPT_NOP" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="CPT_NOP"/>
+	</field>
+	<field name="LIB_A" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="LIB_A"/>
+	</field>
+	<field name="LIB_L" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="LIB_L"/>
+	</field>
+	<field name="TYP_DEPT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="TYP_DEPT"/>
+	</field>
+	<field name="FONCTION_ID" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="FONCTION_ID"/>
+	</field>
+	<field name="COD_FONCTION" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="COD_FONCTION"/>
+	</field>
+	<field name="LIB_FONCA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="LIB_FONCA"/>
+	</field>
+	<field name="LIB_FONCL" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="LIB_FONCL"/>
+	</field>
+	<field name="TYP_FONC" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="TYP_FONC"/>
+	</field>
+	<field name="GRADE_ID" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="GRADE_ID"/>
+	</field>
+	<field name="COD_GRD" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="COD_GRD"/>
+	</field>
+	<field name="LIB_GRDA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="LIB_GRDA"/>
+	</field>
+	<field name="LIB_GRDL" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="LIB_GRDL"/>
+	</field>
+	<field name="CODGRP" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CODGRP"/>
+	</field>
+	<field name="LIBGRP" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="LIBGRP"/>
+	</field>
+	<field name="LIBGRPL" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="LIBGRPL"/>
+	</field>
+	<field name="COLUMN_61" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CODE"/>
+	</field>
+	<field name="COLUMN_62" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="NUM_MISSION"/>
+	</field>
+	<field name="DATARR_P" class="oracle.sql.TIMESTAMP">
+		<property name="com.jaspersoft.studio.field.label" value="DATARR_P"/>
+	</field>
+	<field name="DATDEP_P" class="oracle.sql.TIMESTAMP">
+		<property name="com.jaspersoft.studio.field.label" value="DATDEP_P"/>
+	</field>
+	<field name="OBJETA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="OBJETA"/>
+	</field>
+	<field name="OBJETL" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="OBJETL"/>
+	</field>
+	<field name="MOTCLE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="MOTCLE"/>
+	</field>
+	<field name="COLUMN_68" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CIN"/>
+	</field>
+	<field name="DATE_CIN" class="oracle.sql.TIMESTAMP">
+		<property name="com.jaspersoft.studio.field.label" value="DATE_CIN"/>
+	</field>
+	<field name="DATE_NAISS" class="oracle.sql.TIMESTAMP">
+		<property name="com.jaspersoft.studio.field.label" value="DATE_NAISS"/>
+	</field>
+	<field name="GROUPE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="GROUPE"/>
+	</field>
+	<field name="MATRICULE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="MATRICULE"/>
+	</field>
+	<field name="MINISTR" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="MINISTR"/>
+	</field>
+	<field name="NATIONALITE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="NATIONALITE"/>
+	</field>
+	<field name="NATIONALIL" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="NATIONALIL"/>
+	</field>
+	<field name="NIVEAU" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="NIVEAU"/>
+	</field>
+	<field name="NOM" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="NOM"/>
+	</field>
+	<field name="NOML" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="NOML"/>
+	</field>
+	<field name="PLACE_CIN" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="PLACE_CIN"/>
+	</field>
+	<field name="PLACE_NAISS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="PLACE_NAISS"/>
+	</field>
+	<field name="PRENOM" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="PRENOM"/>
+	</field>
+	<field name="PRENOML" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="PRENOML"/>
+	</field>
+	<field name="RIB" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="RIB"/>
+	</field>
+	<field name="COLUMN_84" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CLASSGRD"/>
+	</field>
+	<field name="COLUMN_85" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="COD_CAT"/>
+	</field>
+	<field name="COLUMN_86" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CODE"/>
+	</field>
+	<field name="COLUMN_87" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CODGRP"/>
+	</field>
+	<field name="COLUMN_88" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="FONCTION_ID"/>
+	</field>
+	<field name="COLUMN_89" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="GRADE_ID"/>
+	</field>
+	<field name="CODE_MOTCLE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CODE_MOTCLE"/>
+	</field>
+	<field name="AMOTCLE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="AMOTCLE"/>
+	</field>
+	<field name="IND" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="IND"/>
+	</field>
+	<field name="LMOTCLE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="LMOTCLE"/>
+	</field>
+	<field name="COLUMN_94" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CODE"/>
+	</field>
+	<field name="COLUMN_95" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="NUM_MISSION"/>
+	</field>
+	<field name="COLUMN_96" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="NUMORD"/>
+	</field>
+	<field name="COLUMN_97" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CIN"/>
+	</field>
+	<field name="AVANCE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="AVANCE"/>
+	</field>
+	<field name="AVANCE_ACC" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="AVANCE_ACC"/>
+	</field>
+	<field name="AVANCE_OLD" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="AVANCE_OLD"/>
+	</field>
+	<field name="DAT_RAP" class="oracle.sql.TIMESTAMP">
+		<property name="com.jaspersoft.studio.field.label" value="DAT_RAP"/>
+	</field>
+	<field name="COLUMN_102" class="oracle.sql.TIMESTAMP">
+		<property name="com.jaspersoft.studio.field.label" value="DATARR_P"/>
+	</field>
+	<field name="DATARR_R" class="oracle.sql.TIMESTAMP">
+		<property name="com.jaspersoft.studio.field.label" value="DATARR_R"/>
+	</field>
+	<field name="COLUMN_104" class="oracle.sql.TIMESTAMP">
+		<property name="com.jaspersoft.studio.field.label" value="DATDEP_P"/>
+	</field>
+	<field name="DATDEP_R" class="oracle.sql.TIMESTAMP">
+		<property name="com.jaspersoft.studio.field.label" value="DATDEP_R"/>
+	</field>
+	<field name="DATE_PAY" class="oracle.sql.TIMESTAMP">
+		<property name="com.jaspersoft.studio.field.label" value="DATE_PAY"/>
+	</field>
+	<field name="ETAT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="ETAT"/>
+	</field>
+	<field name="NUM_OP" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="NUM_OP"/>
+	</field>
+	<field name="NUM_PB" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="NUM_PB"/>
+	</field>
+	<field name="OBS_CTRL" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="OBS_CTRL"/>
+	</field>
+	<field name="RESUME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="RESUME"/>
+	</field>
+	<field name="TAUX_SPEC" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="TAUX_SPEC"/>
+	</field>
+	<field name="TIMBR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="TIMBR"/>
+	</field>
+	<field name="TYP_AV" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="TYP_AV"/>
+	</field>
+	<field name="COLUMN_115" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="COD_PAYS"/>
+	</field>
+	<field name="LANGUE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="LANGUE"/>
+	</field>
+	<field name="LIB_PAYSA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="LIB_PAYSA"/>
+	</field>
+	<field name="LIB_PAYSL" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="LIB_PAYSL"/>
+	</field>
+	<field name="POUR" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="POUR"/>
+	</field>
+	<field name="PREP" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="PREP"/>
+	</field>
+	<field name="COD_ZONE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="COD_ZONE"/>
+	</field>
+	<field name="COLUMN_122" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="COD_PRJ"/>
+	</field>
+	<field name="COLUMN_123" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CODE"/>
+	</field>
+	<field name="LIB_PRJ_L" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="LIB_PRJ_L"/>
+	</field>
+	<field name="LIBPRJ_A" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="LIBPRJ_A"/>
+	</field>
+	<field name="ROLE_ID" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ROLE_ID"/>
+	</field>
+	<field name="NAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="NAME"/>
+	</field>
+	<field name="COLUMN_128" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="TYP_FRAIS"/>
+	</field>
+	<field name="LIB_FRAIS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="LIB_FRAIS"/>
+	</field>
+	<field name="LIB_FRAISL" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="LIB_FRAISL"/>
+	</field>
+	<field name="USER_ID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="USER_ID"/>
+	</field>
+	<field name="COLUMN_132" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ROLE_ID"/>
+	</field>
+	<field name="ID_USER_STRUCT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ID_USER_STRUCT"/>
+	</field>
+	<field name="DATE_AFFECTATION" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="DATE_AFFECTATION"/>
+	</field>
+	<field name="CODE_DEPARTEMENT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CODE_DEPARTEMENT"/>
+	</field>
+	<field name="CODE_UTILISATEUR" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CODE_UTILISATEUR"/>
+	</field>
+	<field name="USERNAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="USERNAME"/>
+	</field>
+	<field name="ENABLE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ENABLE"/>
+	</field>
+	<field name="COLUMN_139" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="NOM"/>
+	</field>
+	<field name="PASSWORD" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="PASSWORD"/>
+	</field>
+	<field name="COLUMN_141" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="PRENOM"/>
+	</field>
+	<field name="COLUMN_142" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="COD_ZONE"/>
+	</field>
+	<field name="LIB_ZONEA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="LIB_ZONEA"/>
+	</field>
+	<field name="LIB_ZONEL" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="LIB_ZONEL"/>
+	</field>
+	<variable name="MATRICULE1" class="java.lang.Integer" resetType="Page" calculation="Count">
+		<variableExpression><![CDATA[$F{MATRICULE}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="142" splitType="Stretch">
+			<staticText>
+				<reportElement x="400" y="10" width="100" height="30" uuid="8ca7bfac-dead-47da-8e93-a47e1c30cbe0"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[الجمهورية التونسية ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="450" y="50" width="100" height="30" uuid="be598d7d-2fe9-4c48-a00e-0abb54483f9f"/>
+				<textFieldExpression><![CDATA[$F{LIB_A}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="120" y="100" width="350" height="30" uuid="e2e21181-eab3-47cb-94c9-6c97372e6097"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[بطاقة تجميد اعتمادات وطلب تسبقة بعنوان مأمورية بالخارج ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="105" splitType="Stretch">
+			<textField>
+				<reportElement x="330" y="20" width="100" height="30" uuid="1cde0885-0ed4-4dec-9be7-223b52e863fa"/>
+				<textFieldExpression><![CDATA[$F{NUMORD}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="20" width="100" height="30" uuid="dfa2484d-ed6d-4771-af07-e7b432018bc0"/>
+				<textFieldExpression><![CDATA[$F{NUM_MISSION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="20" width="100" height="30" uuid="46f595a0-fa13-4bc2-96d8-0192c7aa3054"/>
+				<textFieldExpression><![CDATA[$F{CODE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="450" y="20" width="100" height="30" uuid="cbb3f43a-9f29-4aed-b2d3-44bb7c8e09d6"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ عدد الاذن بالمأمورية:  ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="340" y="60" width="100" height="30" uuid="48ddf805-6cd1-4d6b-af8b-e2e18def215b"/>
+				<textFieldExpression><![CDATA[$F{MATRICULE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="60" width="100" height="30" uuid="5ee3c2a4-31b7-4860-ae96-66dfafa3ccc0"/>
+				<textFieldExpression><![CDATA[$F{RIB}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="450" y="60" width="100" height="30" uuid="b727cede-bb3f-4db8-9915-6a5b129c903d"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[  المعرف الوحيد :  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="60" width="110" height="30" uuid="1e10ab50-a8b9-473a-8c89-529c47cff084"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[رقم الحساب البنكي :  ]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="697" splitType="Stretch">
+			<textField>
+				<reportElement x="380" y="10" width="100" height="30" uuid="34587692-e7d4-438d-abd4-1a43ba97b3b2"/>
+				<textFieldExpression><![CDATA[$F{NOM}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="490" y="10" width="60" height="30" uuid="5ca8b3cf-7ca1-45c2-8595-c2adc7a4a347"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[  الاسم : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="140" y="10" width="100" height="30" uuid="aef723d2-b087-4fe8-a73c-0cfd1a736b76"/>
+				<textFieldExpression><![CDATA[$F{PRENOM}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="250" y="10" width="100" height="30" uuid="fe25857f-4dd6-42b3-8513-baa8220ff955"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ اللقب: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="390" y="50" width="100" height="30" uuid="30a8e4b2-3c93-4bd2-b562-271fea8b35c8"/>
+				<textFieldExpression><![CDATA[$F{NIVEAU}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="500" y="50" width="50" height="30" uuid="5a7c541f-3f02-438c-8d35-aa002accd6fa"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[   الرتبة : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="170" y="50" width="100" height="30" uuid="54324d61-977a-4f24-addd-9a6d805b2003"/>
+				<textFieldExpression><![CDATA[$F{COD_CAT}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="280" y="50" width="100" height="30" uuid="f13d173c-b2b1-46a1-be4e-d3ac4622de17"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[الصنف أو السلك : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="10" y="50" width="51" height="30" uuid="9fa50096-70f1-4002-a13c-a82e75319142"/>
+				<textFieldExpression><![CDATA[$F{COD_GRD}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="70" y="50" width="90" height="30" uuid="086e30c9-983a-4528-85ce-1588f16ec613"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[مستوى التأجير : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="70" y="90" width="360" height="30" uuid="1506ab8c-b8d7-4cd4-9f24-fc6e3346f9d7"/>
+				<textFieldExpression><![CDATA[$F{LIB_PAYSA}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="450" y="90" width="100" height="30" uuid="4f858d42-e3dc-4914-bba4-5692794aa126"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[مكان المأمورية :  ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="230" y="138" width="100" height="30" uuid="11f72420-2def-4319-94ea-56869c30b8f3"/>
+				<textFieldExpression><![CDATA[$F{DATDEP_P}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="340" y="140" width="50" height="30" uuid="9adf8621-025a-41ff-ba39-a43850595a49"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[من : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="40" y="140" width="100" height="30" uuid="dfffb0d8-9d46-404f-bf3a-9205297b6f17"/>
+				<textFieldExpression><![CDATA[$F{DATARR_P}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="150" y="140" width="60" height="30" uuid="41aa8e23-8677-4d38-9e5b-5ddccf4a8f65"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[إلى : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="40" y="180" width="390" height="30" uuid="0a0f4b6d-9246-4f73-9dbf-3ecf3a919a08"/>
+				<textFieldExpression><![CDATA[$F{AMOTCLE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="445" y="180" width="100" height="30" uuid="7dfb71a1-7176-4851-8c58-17015f7ea818"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[موضوع المأمورية :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="40" y="220" width="360" height="30" uuid="2cfd3494-f2b2-45ec-bf96-4e9b2780f74e"/>
+				<textFieldExpression><![CDATA[$F{SUPPORTE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="410" y="220" width="135" height="30" uuid="0fae510d-5f2b-4120-bf58-4939b9b71d1e"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[تحمل مصاريف المأمورية على : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="40" y="260" width="370" height="30" uuid="f2916733-ebc7-46c0-9648-b5fc418709db"/>
+				<textFieldExpression><![CDATA[$F{SUPPORTE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="420" y="260" width="124" height="30" uuid="af7e1b95-a631-427b-8f5c-da27253d7491"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[تحمل مصاريف السكن على : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="40" y="300" width="370" height="30" uuid="e74d9794-6ab6-4424-bbfd-4dca2d2d6790"/>
+				<textFieldExpression><![CDATA[$F{SUPPORTE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="420" y="300" width="125" height="30" uuid="dbfc87cc-7280-4b03-bfd2-bfe035bc8dab"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[تحمل مصاريف المشاركة على : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="40" y="340" width="360" height="30" uuid="92e44739-6344-41df-95b7-9dc67c044c45"/>
+				<textFieldExpression><![CDATA[$F{SUPPORTE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="410" y="340" width="134" height="30" uuid="ad64d89b-81ac-43df-8a0e-a5024c6b04b3"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[تحمل مصاريف النقل على : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="360" y="390" width="100" height="30" uuid="1acd5c2f-e411-4460-a5f7-fb7dba668407"/>
+				<textFieldExpression><![CDATA[$F{TYPETRANSPORT}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="470" y="390" width="75" height="30" uuid="369f16dd-7d35-4b06-912a-1d5da0c0956b"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[وسيلة النقل : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="390" width="100" height="30" uuid="c254089e-81b0-41c0-a5d1-7f9661c2b93c"/>
+				<textFieldExpression><![CDATA[$F{VALEUR_TR}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="230" y="390" width="100" height="30" uuid="742b2f4b-9ac3-4ed0-84d7-0450af9fe71b"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[مصاريف النقل :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="441" width="300" height="30" uuid="ed6a820a-09c4-4e86-8f68-572b12e17512"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[بيان حول مصاريف المأمورية باستثناء مصاريف النقل ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="400" y="140" width="80" height="30" uuid="73110f13-d403-4d76-bbf7-38f7543a0064"/>
+				<textFieldExpression><![CDATA[$P{duree}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="10" y="500" width="535" height="63" uuid="f215b6e7-3fb4-446c-85c9-12519c651b92">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+					<property name="com.jaspersoft.studio.components.autoresize.next" value="true"/>
+					<property name="com.jaspersoft.studio.components.autoresize.proportional" value="true"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="tableau" uuid="6d6bded2-65e4-4f15-bd27-f5c1e0c221ba">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="137" uuid="fa199a65-3916-4aed-ad55-61134e63174c">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Colonne1"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="137" height="30" uuid="88cf25d6-df2b-447d-8dea-637f3729e9c4"/>
+								<text><![CDATA[المنحة الجملية للمأمورية ]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="137" height="30" uuid="e0607593-05d7-4d7f-be49-9e241ffc6d97"/>
+								<textFieldExpression><![CDATA[$F{VALEUR_MISS}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="136" uuid="0433b744-f15c-451b-9b1a-83bc7835e7b2">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Colonne2"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="136" height="30" uuid="52e6af55-4c05-4e69-87bf-d3054419d435"/>
+								<text><![CDATA[الطابع الجبائي ]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="136" height="30" uuid="e0659a9e-125d-4324-bf7b-4d7f2fb3b475"/>
+								<textFieldExpression><![CDATA[$F{COLUMN_2}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="132" uuid="64cc21fd-c499-4cab-948e-acea243e7c85">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Colonne3"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="132" height="30" uuid="9a6f8ed7-9232-4874-a2b7-4033d1deecf0"/>
+								<text><![CDATA[مبلغ التسبقة ]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="132" height="30" uuid="024cecf8-7ed7-49ee-8b91-e5d3ab3f25c0"/>
+								<textFieldExpression><![CDATA[$F{AVANCE}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="130" uuid="c70184fe-73fa-406c-8c40-c711549ec947">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Colonne4"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="130" height="30" uuid="59abc276-53cd-481a-9ad0-234972f0177a"/>
+								<text><![CDATA[المصاريف الجملية للسكن ]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="130" height="30" uuid="1fbd2763-0501-4043-a174-037de39c69ba"/>
+								<textFieldExpression><![CDATA[$F{VALEUR_P}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement x="490" y="140" width="54" height="30" uuid="ba564ac8-dc5b-4ef9-aceb-cdac0d52ea7c"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[المدة ]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>
